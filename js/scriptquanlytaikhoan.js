@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Modal thêm
     const addModal = document.getElementById("add-modal");
     const showAddModalBtn = document.getElementById("show-add-modal-btn");
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Modal sửa
     const editModal = document.getElementById("edit-modal");
     const closeEditModalBtn = document.getElementById("close-edit-modal-btn");
-    const editButtons = document.querySelectorAll(".btn-edit"); 
+    const editButtons = document.querySelectorAll(".btn-edit");
     // Form sửa
     const editAccountId = document.getElementById("edit-account-id");
     const editAccountName = document.getElementById("edit-account-name");
@@ -14,25 +14,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const editAccountPassword = document.getElementById("edit-account-password");
     // Xử lý Modal thêm
     if (showAddModalBtn) {
-        showAddModalBtn.addEventListener("click", function() {
+        showAddModalBtn.addEventListener("click", function () {
             const addForm = addModal.querySelector("form");
             if (addForm) addForm.reset();
-                addModal.style.display = "flex";
+            addModal.style.display = "flex";
         });
     }
     if (closeAddModalBtn) {
-        closeAddModalBtn.addEventListener("click", function() {
+        closeAddModalBtn.addEventListener("click", function () {
             addModal.style.display = "none";
         });
     }
     // Xử lý nút sửa
     if (closeEditModalBtn) {
-        closeEditModalBtn.addEventListener("click", function() {
+        closeEditModalBtn.addEventListener("click", function () {
             editModal.style.display = "none";
         });
     }
     editButtons.forEach(button => {
-        button.addEventListener("click", function(e) {
+        button.addEventListener("click", function (e) {
             e.preventDefault();
             const maNV = this.getAttribute("data-manv");
             const hoTen = this.getAttribute("data-hoten");
@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 editAccountRole.value = "NhanVien";
             }
-            editAccountPassword.value = ""; 
+            editAccountPassword.value = "";
             editModal.style.display = "flex";
         });
     });
     // Xử lý đóng modal khi bấm ra ngoài
-    window.addEventListener("click", function(event) {
+    window.addEventListener("click", function (event) {
         if (event.target == addModal) {
             addModal.style.display = "none";
         }

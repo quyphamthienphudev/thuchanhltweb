@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Modal thêm
     const addModal = document.getElementById("add-modal");
     const showAddModalBtn = document.getElementById("show-add-modal-btn");
@@ -13,25 +13,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const editCategoryDesc = document.getElementById("edit-category-desc");
     // Xử lý modal thêm
     if (showAddModalBtn) {
-        showAddModalBtn.addEventListener("click", function() {
-            addModal.classList.add('active'); 
+        showAddModalBtn.addEventListener("click", function () {
+            addModal.classList.add('active');
         });
     }
     // Khi bấm nút X (đóng) trên modal thêm
     if (closeAddModalBtn) {
-        closeAddModalBtn.addEventListener("click", function() {
-            addModal.classList.remove('active'); 
+        closeAddModalBtn.addEventListener("click", function () {
+            addModal.classList.remove('active');
         });
     }
     // Xử lý Modal sửa 
     // Khi bấm nút X (đóng) trên modal Sửa
     if (closeEditModalBtn) {
-        closeEditModalBtn.addEventListener("click", function() {
+        closeEditModalBtn.addEventListener("click", function () {
             editModal.classList.remove('active');
         });
     }
     editButtons.forEach(button => {
-        button.addEventListener("click", function(e) {
+        button.addEventListener("click", function (e) {
             e.preventDefault();
             const maDM = this.getAttribute("data-madm");
             const tenDM = this.getAttribute("data-tendm");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     // Xử lý đóng modal khi bấm ra ngoài
-    window.addEventListener("click", function(event) {
+    window.addEventListener("click", function (event) {
         if (event.target == addModal) {
             addModal.classList.remove('active');
         }

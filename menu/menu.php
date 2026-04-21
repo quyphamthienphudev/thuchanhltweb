@@ -11,8 +11,9 @@
                 }
             }
             ?>
-            <a href="giohang.php" class="cart-link">
-                🛒 Giỏ hàng (<?php echo $soLuong; ?>)
-            </a>
+        <a href="giohang.php" class="cart-link">
+            🛒 Giỏ hàng (
+            <?php echo $soLuong; ?>)
+        </a>
     </ul>
 </nav>
