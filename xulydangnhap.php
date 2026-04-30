@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         }
     } catch (PDOException $e) {
-        $_SESSION['error'] = "Loi: " . $e->getMessage();
+        $_SESSION['error'] = "Tên đăng nhập hoặc mật khẩu không đúng";
         header("Location: dangnhap.php");
         exit;
     }
