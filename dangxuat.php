@@ -13,7 +13,7 @@ session_destroy();
 
 // Chuyển hướng người dùng về trang chủ sau khi đăng xuất
 // Tránh việc người dùng quay lại trang cũ bằng nút Back
-header("Location: index.php");
+header("Location: trangchu.php");
 
 // Dừng toàn bộ quá trình xử lý script
 // Bắt buộc để tránh code phía dưới chạy thêm

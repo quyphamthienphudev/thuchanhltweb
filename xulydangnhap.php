@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['manv'] = $nhanvien['MaNV'];
             $_SESSION['hoten'] = $nhanvien['HoTenNV'];
             $_SESSION['vaitro'] = $nhanvien['VaiTro'];
-            header("Location: index.php");
+            header("Location: trangchu.php");
             exit;
         } else {
             $_SESSION['error'] = "Tên đăng nhập hoặc mật khẩu không đúng";

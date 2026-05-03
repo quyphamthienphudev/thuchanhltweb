@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_POST['masp'])) {
-    header("Location: index.php");
+    header("Location: trangchu.php");
     exit;
 }
 $masp = $_POST['masp'];
@@ -12,7 +12,7 @@ $soluong = max(1, (int)$_POST['soluong']);
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
-// Nếu đã có sản phẩm → cộng số lượng
+// Nếu đã có sản phẩm thì cập nhật số lượng
 if (isset($_SESSION['cart'][$masp])) {
     $_SESSION['cart'][$masp]['soluong'] += $soluong;
 } else {

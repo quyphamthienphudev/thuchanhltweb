@@ -3,7 +3,7 @@ session_start();
 require_once 'dbconnection.php';
 //KIỂM TRA VAI TRÒ KHI ĐĂNG NHẬP
 if (!isset($_SESSION['loggedin']) || $_SESSION['vaitro'] !== 'NhanVien') {
-    header("Location: index.php");
+    header("Location: trangchu.php");
     exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

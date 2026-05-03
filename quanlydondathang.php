@@ -2,7 +2,7 @@
     session_start();
     //KIỂM TRA VAI TRÒ KHI ĐĂNG NHẬP
     if (!isset($_SESSION['loggedin']) || $_SESSION['vaitro'] !== 'NhanVien') {
-        header("Location: index.php");
+        header("Location: trangchu.php");
         exit;
     }
     require_once 'dbconnection.php';
@@ -52,7 +52,7 @@
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="index.php" class="logo">Cửa hàng bán linh kiện máy tính</a>
+            <a href="trangchu.php" class="logo">Cửa hàng bán linh kiện máy tính</a>
             <?php include_once 'menu/menu.php'; ?>
             <?php
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {

@@ -69,9 +69,9 @@ $tongTien = 0;
             </thead>
             <tbody>
                 <?php foreach ($cart as $item): 
-    $thanhTien = $item['giaban'] * $item['soluong'];
-    $tongTien += $thanhTien;
-?>
+                    $thanhTien = $item['giaban'] * $item['soluong'];
+                    $tongTien += $thanhTien;
+                ?>
                 <tr>
                     <td><img src="uploads/<?php echo $item['hinhanh']; ?>"></td>
                     <td>
